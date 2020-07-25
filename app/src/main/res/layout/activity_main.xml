@@ -15,190 +15,284 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="@string/app_name"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/app_name" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <!-- Material Button -->
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <!-- Material Button -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_medium_2">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_material_button"
+                        android:textAllCaps="false" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_card_medium_2"
+                        android:text="@string/lbl_material_button"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_android"
+                        app:rippleColor="@android:color/holo_blue_bright" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:text="@string/lbl_material_button"
+                        app:backgroundTint="@android:color/holo_green_light"
+                        app:icon="@drawable/ic_android"
+                        app:rippleColor="@android:color/black" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:text="@string/lbl_material_button"
+                        app:strokeColor="@android:color/darker_gray"
+                        app:strokeWidth="@dimen/margin_small" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:text="@string/lbl_material_button"
+                        app:cornerRadius="@dimen/margin_medium" />
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Material Chip -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_medium_2">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_chip_text" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:checkable="true"
+                        android:text="@string/lbl_chip_text" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:text="Chip With Icon"
+                        app:chipIconTint="@color/colorPrimary"
+                        app:checkedIconTint="@color/colorPrimary"
+                        app:chipIcon="@drawable/ic_android" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:checkable="true"
+                        android:text="Chip With Checked Icon"
+                        app:checkedIcon="@drawable/ic_close_white" />
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="@dimen/margin_medium_2">
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lbl_material_button"
-                    android:textAllCaps="false" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_card_medium_2"
-                    android:text="@string/lbl_material_button"
-                    android:textAllCaps="false"
-                    app:icon="@drawable/ic_android"
-                    app:rippleColor="@android:color/holo_blue_bright" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_medium_2"
-                    android:text="@string/lbl_material_button"
-                    app:backgroundTint="@android:color/holo_green_light"
-                    app:icon="@drawable/ic_android"
-                    app:rippleColor="@android:color/black" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_medium_2"
-                    android:text="@string/lbl_material_button"
-                    app:strokeColor="@android:color/darker_gray"
-                    app:strokeWidth="@dimen/margin_small" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_medium_2"
-                    android:text="@string/lbl_material_button"
-                    app:cornerRadius="@dimen/margin_medium" />
-
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
-        <!-- Material Chip -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="@dimen/margin_medium_2">
-
+                android:layout_margin="@dimen/margin_medium"
+                app:chipSpacing="@dimen/margin_medium"
+                app:singleLine="true">
+                <!--            app:singleLine="true"-->
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lbl_chip_text" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_medium_2"
                     android:checkable="true"
-                    android:text="@string/lbl_chip_text" />
+                    android:text="This" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_medium_2"
-                    android:text="Chip With Icon"
-                    app:checkedIconTint="@color/colorPrimary"
-                    app:chipIcon="@drawable/ic_android" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_medium_2"
                     android:checkable="true"
-                    android:text="Chip With Checked Icon"
-                    app:checkedIcon="@drawable/ic_close_white" />
+                    android:text="is" />
 
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="a" />
 
-            </LinearLayout>
-        </HorizontalScrollView>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="group" />
 
-        <com.google.android.material.chip.ChipGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_medium"
-            app:chipSpacing="@dimen/margin_medium"
-            >
-<!--            app:singleLine="true"-->
-            <com.google.android.material.chip.Chip
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="of" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="chips" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="contained" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="within" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="a" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="chip" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="group" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="This" />
+                android:layout_margin="@dimen/margin_medium_2"
+                app:cardUseCompatPadding="true"
+                app:strokeColor="@color/colorAccent"
+                app:strokeWidth="2dp"
+                app:cardElevation="4dp">
 
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_avatar" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/imageView"
+                        android:gravity="center"
+                        android:text="This is TextView in Material Card" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="is" />
+                android:layout_margin="@dimen/margin_medium"
+                android:padding="@dimen/margin_small"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorPrimary">
 
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Flying Hint"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_another_flying_hint"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="a" />
+                android:padding="@dimen/margin_small"
+                android:layout_margin="@dimen/margin_medium"
+                app:counterEnabled="true"
+                app:counterMaxLength="16"
+                app:counterOverflowTextAppearance="@style/CounterOverFlow"
+                app:counterTextAppearance="@style/CounterText"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/ErrorText"
+                app:hintTextAppearance="@style/HintText">
 
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="group" />
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="of" />
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="chips" />
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="contained" />
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="within" />
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="a" />
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="chip" />
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:text="group" />
-
-        </com.google.android.material.chip.ChipGroup>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_another_flying_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Another Flying Hint" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-    </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabAlignmentMode="end"
+        app:fabCradleMargin="@dimen/margin_medium"
+        app:fabCradleRoundedCornerRadius="@dimen/fab_margin"
+        app:fabCradleVerticalOffset="@dimen/margin_medium"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="@color/iconColor"
+        app:layout_anchor="@id/bottomAppBar"
+        app:srcCompat="@drawable/ic_email_white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
